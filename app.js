@@ -15,7 +15,7 @@ const body_parser = require("body-parser");
 
 
 const dbx = new Dropbox({
-    accessToken: 'YOURACCESSTOKEN',
+    accessToken: 'sl.BG3BeOJUQWytxpfHnuwko0YLJJVOD1QcJWc1C9S_lgtZZAZUFbh6b-8QEnvqAajXgr1Po05WFh5wWnZeN_hXRdH0J7SEJYxwWKTUC6YYFEouWTq6olILYY2Dcq4neD6KWpbjgpI',
     fetch
 });
 
