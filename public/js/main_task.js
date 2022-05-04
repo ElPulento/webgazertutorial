@@ -701,10 +701,10 @@ var on_finish_callback = function () {
       contentType: "application/json"
     })
     .done(function () {
-      // alert("your data has been saved!")
+      alert("your data has been saved!")
     })
     .fail(function () {
-      //alert("problem occured while writing data to box.");
+      alert("problem occured while writing data to box.");
     })
 }
 
@@ -748,8 +748,9 @@ function startExperiment() {
       }
     },
     preload_images: [exp_images, instruct_img,prac_img],
-    on_finish: () => on_finish_callback(),
-    on_close: () => on_finish_callback()
+    on_finish: () => on_finish_callback()
+    // ,
+    // on_close: () => on_finish_callback()
 
   });
 };

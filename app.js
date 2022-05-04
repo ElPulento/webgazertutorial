@@ -15,9 +15,28 @@ const body_parser = require("body-parser");
 
 
 const dbx = new Dropbox({
-    accessToken: 'sl.BG3BeOJUQWytxpfHnuwko0YLJJVOD1QcJWc1C9S_lgtZZAZUFbh6b-8QEnvqAajXgr1Po05WFh5wWnZeN_hXRdH0J7SEJYxwWKTUC6YYFEouWTq6olILYY2Dcq4neD6KWpbjgpI',
+    accessToken: 'sl.BG8vUZxPvuoozMA6K8u39pZ2yMJ_Q-rnaXCEPVwy-vxsI1Plq2XyWHtTvhC2Qjvh5IlqTRvTED3zxZnkLwj1d2fIbRzPk0pVtKoPy4HJUQJ4UvIPwaL37W7oMysAKikZ9kIQryM',
     fetch
 });
+
+//  MOSTRAR INFO DE MI CUENTA EN DROPBOX
+// dbx.usersGetCurrentAccount()
+//   .then(function(response) {
+//     console.log(response);
+//   })
+//   .catch(function(error) {
+//     console.error(error);
+//   });
+
+
+//  MOSTRAR LAS CARPETAS EN EL ROOT DE MI DROPBOX
+// dbx.filesListFolder({path: ''})
+//     .then(function(response) {
+//       console.log(response.entries);
+//     })
+//     .catch(function(error) {
+//       console.error(error);
+//     });
 
 
 saveDropbox = function (content, filename, foldername) {

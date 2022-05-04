@@ -184,31 +184,31 @@ jsPsych.plugins["binary-choice"] = (function () {
     display_stimuli();
     if(trial.doEyeTracking) {
       webgazer.resume();
-    webgazer.showVideo(false);
-    webgazer.showPredictionPoints(true);
-    webgazer.showFaceOverlay(false);
-    webgazer.showFaceFeedbackBox(false);
-    var starttime = performance.now();
-    var eye_tracking_interval = setInterval(
-      function() {
-        var pos = webgazer.getCurrentPrediction();
-        if (pos) {
+      webgazer.showVideo(false);
+      webgazer.showPredictionPoints(true);
+      webgazer.showFaceOverlay(false);
+      webgazer.showFaceFeedbackBox(false);
+      var starttime = performance.now();
+      var eye_tracking_interval = setInterval(
+        function() {
+          var pos = webgazer.getCurrentPrediction();
+          if (pos) {
 
-          var relativePosX = pos.x/screen.width ;
-          var relativePosY = pos.y/screen.height;
-          var relativePosX2= pos.x/innerWidth ;
-          var relativePosY2 = pos.y/innerHeight;
-          eyeData.history.push({
-           // 'x': pos.x,
-          //  'y': pos.y,
-            'relative-x': relativePosX,
-            'relative-y': relativePosY,
-            'relative-x2': relativePosX2,
-            'relative-y2': relativePosY2,
-            'elapse-time': performance.now() - starttime
-          });
-        }
-      },20);
+            var relativePosX = pos.x/screen.width ;
+            var relativePosY = pos.y/screen.height;
+            var relativePosX2= pos.x/innerWidth ;
+            var relativePosY2 = pos.y/innerHeight;
+            eyeData.history.push({
+            // 'x': pos.x,
+            //  'y': pos.y,
+              'relative-x': relativePosX,
+              'relative-y': relativePosY,
+              'relative-x2': relativePosX2,
+              'relative-y2': relativePosY2,
+              'elapse-time': performance.now() - starttime
+            });
+          }
+        },20);
     }
 
     
